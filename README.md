@@ -26,7 +26,8 @@ SMS via SMPP send daemon with auto-reply and own database
 ```
 
 ### Usage send SMS via this gateway:
-POST application/json content to service /queueSend:
+
+To send message do POST application/json content to service /queueSend:
 ```
 { from: "SENDER PHONE OR NAME",
   phone: "RECEIVER PHONE",
@@ -35,5 +36,10 @@ POST application/json content to service /queueSend:
 ```
 Example:
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"from":"ORGANIZATION","phone":"+79999999999"}' http://127.0.0.1:8881/smppgate/queueSend
+curl -H "Content-Type: application/json" -X POST -d '{"from":"ORGANIZATION","phone":"+79999999999","text":"your message"}' http://127.0.0.1:8881/smppgate/queueSend
+```
+
+To get report on 27.01.2017:
+```
+curl --fail --silent http://127.0.0.1:8881/smppgate/dayReport?date=2017-01-27
 ```

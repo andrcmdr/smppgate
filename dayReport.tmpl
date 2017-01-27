@@ -1,14 +1,14 @@
-Отчет за {{ .Date }}
+Report on {{ .Date }}
 
-Доставленные сообщения:
+Delivered messages::
 {{range .DeliveredMsg}}{{ .MessageId }}	{{ .From }}	{{ .Phone }}	{{ .Text }}
 {{end}}
-Отправленные сообщения:
+Sent messages:
 {{range .SentMsg}}{{ .MessageId }}	{{ .From }}	{{ .Phone }}	{{ .Text }}
 {{end}}
-Ошибочные (неотправленные) сообщения:
-{{range .ErroredMsg}}{{ .MessageId }}	{{ .From }}	{{ .Phone }}	{{ .Text }}	ОШИБКА: {{ .LastError }}
+Errored messages:
+{{range .ErroredMsg}}{{ .MessageId }}	{{ .From }}	{{ .Phone }}	{{ .Text }}	ERROR: {{ .LastError }}
 {{end}}
-Сообщения в очереди:
+Queued messages:
 {{range .QueuedMsg}}{{ .MessageId }}	{{ .From }}	{{ .Phone }}	{{ .Text }}
 {{end}}
