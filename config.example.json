@@ -5,7 +5,7 @@
 		"smpp://login:password@127.0.0.2:2775"
 	],
 	"sendDisabled": "false",
-	"mysql": "smppgate:smppgate@tcp(master.net.itnt.me:3306)/smppgate?charset=utf8&parseTime=True&loc=Local",
+	"mysql": "smppgate:smppgate@tcp(localhost:3306)/smppgate?charset=utf8&parseTime=True&loc=Local",
 	"listen": "127.0.0.1:8881",
 	"projectPath": "/smppgate",
 	"forwardSecret": "SECRET"
