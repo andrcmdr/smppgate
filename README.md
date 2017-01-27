@@ -24,6 +24,13 @@ SMS via SMPP send daemon with auto-reply and own database
     "forwardSecret": ""
 }
 ```
+* Install Go > 1.6
+* Run installdeps.sh to install depend go packets
+* Run build.sh to build project
+* Run daemon manually or using systemd unit in /systemd folder:
+```
+./smppgate-linux-amd64 ./config.json
+```
 
 ### Usage send SMS via this gateway:
 
