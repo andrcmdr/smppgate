@@ -1,0 +1,12 @@
+{
+	"logFile": "/var/log/smppgate.log",
+	"connectURI": [
+		"smpp://login:password@127.0.0.1:2775?SourceAddrTON=5&SourceAddrNPI=1&DestAddrTON=1&DestAddrNPI=1",
+		"smpp://login:password@127.0.0.2:2775"
+	],
+	"sendDisabled": "false",
+	"mysql": "smppgate:smppgate@tcp(master.net.itnt.me:3306)/smppgate?charset=utf8&parseTime=True&loc=Local",
+	"listen": "127.0.0.1:8881",
+	"projectPath": "/smppgate",
+	"forwardSecret": "SECRET"
+}

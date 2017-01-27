@@ -1,0 +1,17 @@
+[Unit]
+Description=SMPP Gateway
+After=syslog.target
+After=network.target slapd.service nslcd.service
+
+[Service]
+Type=simple
+PIDFile=/run/smppgate.pid
+WorkingDirectory=/home/smppgate
+User=smppgate
+Group=smppgate
+ExecStart=/home/smppgate/smppgate-linux-amd64 ./config.json
+Restart=on-failure
+IgnoreSIGPIPE=yes
+
+[Install]
+WantedBy=multi-user.target

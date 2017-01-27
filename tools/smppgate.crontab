@@ -1,0 +1,8 @@
+# sudo crontab -u smppgate /home/smppgate/tools/smppgate.crontab
+
+LC_ALL="ru_RU.UTF-8"
+LANG="ru_RU.UTF-8"
+
+HOME=/home/smppgate
+
+0 11 * * * ${HOME}/tools/getReport.sh
